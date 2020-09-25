@@ -11,5 +11,5 @@ go tab final: user.tab_final()
 # CH editiions
 nippy: app.tab_open()
 crack: app.tab_close()
-steppy: app.tab_previous()
-steffy: app.tab_next()
+steppy: app.tab_next()
+steffy: app.tab_previous()
