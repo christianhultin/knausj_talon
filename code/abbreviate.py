@@ -160,6 +160,20 @@ ctx.lists["user.abbreviation"] = {
     "verify": "vrfy",
     "versus": "vs",
     "window": "win",
+
+     # months,
+    "january": "jan",
+    "february": "feb",
+    "march": "mar",
+    "april": "apr",
+    "june": "jun",
+    "july": "jul",
+    "august": "aug",
+    "september": "sept",
+    "october": "oct",
+    "november": "nov",
+    "december": "dec",
+    'dictionary': 'dict',
 }
 
 
