@@ -1,7 +1,8 @@
 import time
-from talon import Module, ctrl
+from talon import Module, ctrl, actions
 
 mod = Module()
+
 
 @mod.action_class
 class Actions:
@@ -17,6 +18,6 @@ class Actions:
 
     def go_to_path_in_finder(path: str):
         """Goes to a path in finder"""
-        key('cmd-shift-g')
-        Str(path)(None)
-        press('return')
+        actions.key('cmd-shift-g')
+        actions.insert(path)
+        actions.key('return')
