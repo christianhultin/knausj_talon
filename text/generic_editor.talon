@@ -4,22 +4,22 @@ find it:
 next one:
     edit.find_next()
 
-go word left:
+[go word] left:
     edit.word_left()
 
-go word right:
+[go word] right:
     edit.word_right()
 
-go left:
+[go] lefty:
     edit.left()
 
-go right:
+[go] righty:
     edit.right()
 
-go up:
+[go] up:
     edit.up()
 
-go down:
+[go] down:
     edit.down()
 
 go line start:

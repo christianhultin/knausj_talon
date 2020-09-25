@@ -7,3 +7,9 @@ tab close: app.tab_close()
 tab reopen: app.tab_reopen()
 go tab <number>: user.tab_jump(number)
 go tab final: user.tab_final()
+
+# CH editiions
+nippy: app.tab_open()
+crack: app.tab_close()
+steppy: app.tab_previous()
+steffy: app.tab_next()
