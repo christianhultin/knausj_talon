@@ -23,7 +23,7 @@ scroll up: (up, actionsPerRepeatCycle=scrollingDistance),
 
 # Mouse
 skip: user.mouse_smooth_scroll(600)
-skippy: user.mouse_smooth_scroll(600)
+skippy: user.mouse_smooth_scroll(300)
 hip: user.mouse_smooth_scroll(-600)
 hippy: user.mouse_smooth_scroll(-300)
 # 'mouse (left | up | right | down)' + optional_numerals: move_mouse_relative,
@@ -39,9 +39,9 @@ go air drop: key(cmd-shift-r),
 go utilities: key(cmd-shift-u),
 go downloads: key(cmd-shift-l),
 go applications: key(cmd-shift-a),
-# go developer: go_to_path(~/Developer),
-# go talon: go_to_path(~/.talon/user),
-# go pictures: go_to_path(~/Pictures),
+go developer: user.go_to_path_in_finder(~/Developer),
+go talon: user.go_to_path_in_finder(~/.talon/user),
+go pictures: user.go_to_path_in_finder(~/Pictures),
 
 # various
 (close | quit) application: key(cmd-q),

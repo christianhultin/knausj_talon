@@ -14,3 +14,9 @@ class Actions:
         for x in range(depth):
             ctrl.mouse_scroll(y=split)
             time.sleep(interval)
+
+    def go_to_path_in_finder(path: str):
+        """Goes to a path in finder"""
+        key('cmd-shift-g')
+        Str(path)(None)
+        press('return')
