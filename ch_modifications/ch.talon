@@ -19,11 +19,30 @@ italics: key(cmd-i)
 underline: key(cmd-u)
 
 # Mouse
-skip: user.mouse_smooth_scroll(600)
-skippy: user.mouse_smooth_scroll(300)
-hip: user.mouse_smooth_scroll(-600)
-hippy: user.mouse_smooth_scroll(-300)
-# 'mouse (left | up | right | down)' + optional_numerals: move_mouse_relative
+skip: 
+    user.mouse_move_center_active_window()
+    user.mouse_smooth_scroll(600)
+skippy: 
+    user.mouse_move_center_active_window()
+    user.mouse_smooth_scroll(300)
+hip: 
+    user.mouse_move_center_active_window()
+    user.mouse_smooth_scroll(-600)
+hippy: 
+    user.mouse_move_center_active_window()
+    user.mouse_smooth_scroll(-300)
+skip right: 
+    user.mouse_move_center_active_window()
+    mouse_scroll(0, -40)
+skip left:
+    user.mouse_move_center_active_window()
+    mouse_scroll(0, 40)
+mouse up <number>: move_mouse_relative('up', {number})
+mouse right <number>: move_mouse_relative('right', {number})
+mouse down <number>: move_mouse_relative('down', {number})
+mouse left <number>: move_mouse_relative('left', {number})
+mouse (install | update): move_mouse_absolute(1860, 92)
+mouse outlook: move_mouse_absolute(1376, 881)
 
 # finder shortcuts
 go computer: key(cmd-shift-c)
@@ -53,6 +72,10 @@ elipsis: '...'
 lock (computer | screen): 
     speech.disable()
     key(ctrl-cmd-q)
+
+# personal
+paste e-mail: 'christian.h.hultin@gmail.com'
+paste work e-mail: 'christian.hultin@netlight.com'
 
 # # Special keys - doesnt seem to work yet
 # increase brightness: key(brightness_up, 2)
