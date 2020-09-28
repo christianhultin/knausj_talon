@@ -1,11 +1,11 @@
 DONE:
 - Imported folder
 - Ch
+- Mouse advanced (scroll)
+- Glob: Double check basic keys / alphabet / std ... (remove arrow, use fail instead of fine etc)
 
 BEGUN:
-- Mouse advanced (scroll)
 
 LEFT:
 - Applications
-- Glob: Double check basic keys / alphabet / std ... (remove arrow, use fail instead of fine etc)
-- Code / language - specific stuff
+- Code / language - specific
