@@ -12,8 +12,8 @@ bookmark bar: browser.bookmarks_bar()
 bookmark it: browser.bookmark()
 bookmark tabs: browser.bookmark_tabs()
 
-(refresh | reload) it: browser.reload()
-(refresh | reload) it hard: browser.reload_hard()
+(refresh | reload) [it]: browser.reload()
+(refresh | reload) [it] hard: browser.reload_hard()
 
 show downloads: browser.show_downloads()
 show extensions: browser.show_extensions()
@@ -62,3 +62,17 @@ dev tools: browser.toggle_dev_tools()
 # restore: key(X)
 # search tabs: key(T)
 # move to window: key(W)
+
+
+# CH Editions: 
+website <user.text>: user.go_to_website(text)
+# Gmail:
+mark: key(x)
+mark all: key(q)
+unmark [all]: key(w)
+top message: key(up: 50)
+inbox: command_with_delay("esc esc g i", 0.2)
+select: key(x)
+unread: command_with_delay("shift-u", 0.2)
+read: command_with_delay("shift-i", 0.2)
+quick read: command_with_delay("x t w e ", 0.2)

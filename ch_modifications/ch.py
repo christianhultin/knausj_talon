@@ -3,6 +3,30 @@ from talon import Module, ctrl, actions, ui
 
 mod = Module()
 
+websites = {
+    'facebook': 'https://facebook.com',
+    'twitter': 'https://twitter.com',
+    'trello': 'https://trello.com',
+    'gmail': 'https://gmail.com',
+    'get hub': 'https://github.com',
+    'reddit': 'https://reddit.com',
+    'talon docs': 'https://github.com/dwighthouse/unofficial-talonvoice-docs',
+    'official docs': 'https://talonvoice.com/docs/index.html',
+    'hobo': 'https://se.hbonordic.com/',
+    'messenger': 'https://www.messenger.com/',
+    'youtube': 'https://www.youtube.com/',
+    'community': 'https://github.com/dwiel/talon_community',
+    'localhost': 'https://localhost:3000',
+    'rebel': 'https://rebel.netlight.com/',
+    'stack overflow': 'https://stackoverflow.com/',
+    # git lab
+    'board': 'https://git.sto.netlight.se/feedback-tool/feedback-client/boards',
+    'laugh board': 'https://git.sto.netlight.se/groups/laf-tool/-/boards',
+    'merge': 'https://git.sto.netlight.se/feedback-tool/feedback-client/merge_requests',
+    'laugh merge': 'https://git.sto.netlight.se/laf-tool/laf-client/merge_requests',
+    'back end merge': 'https://git.sto.netlight.se/feedback-tool/feedback-api/merge_requests',
+    'back end board': 'https://git.sto.netlight.se/feedback-tool/feedback-api/boards',
+}
 
 @mod.action_class
 class Actions:
@@ -63,3 +87,16 @@ class Actions:
         rect.width *= w
         rect.height *= h
         win.rect = rect
+
+    def go_to_website(name: str):
+        actions.browser.focus_address()
+        w = websites.get(name)
+        actions.key("cmd-a")
+        actions.insert(name)
+        actions.key("enter")
+
+    def command_with_delay(keyDescription, delay):
+        keysToBePressed = keyDescription.split()
+        for key in keysToBePressed:
+            actions.key(key)
+            time.sleep(delay)

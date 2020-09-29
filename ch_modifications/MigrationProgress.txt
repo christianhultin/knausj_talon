@@ -8,14 +8,15 @@ DONE:
     - vscode
     - slack
     - iterm
+    - notes: Wont do (nothing usefull)
+    - Outlook
+    - firefox
+    - Chrome
+    - gmail
 
 BEGUN:
 
 LEFT:
 - Applications
-    - firefox
-    - Chrome
-    - gmail
-    - notes
-    - Outlook
+    - intellij
 - Code / language - specific

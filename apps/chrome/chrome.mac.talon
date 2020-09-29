@@ -71,3 +71,14 @@ action(browser.submit_form):
 
 action(browser.toggle_dev_tools):
 	key(cmd-alt-i)
+
+
+# CH Editions: 
+inspect: key(cmd-shift-c)
+device: key(cmd-shift-m)
+console: key(cmd-alt-j)
+
+# workona
+workspace[s]: key(alt-a)
+switch workspace: key(alt-s)
+save tab: key(alt-d)
