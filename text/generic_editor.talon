@@ -181,3 +181,12 @@ cut word left:
 cut word right: 
     edit.extend_word_right()
     edit.cut()
+
+# CH editions
+slap: key(enter)
+slappy: key(esc end enter)
+slippy: key(esc home enter up)
+(stacy | spacey): key(esc enter enter up)
+(delete line | snap): key(cmd-shift-k)
+(snipper | clear line): key(cmd-right home cmd-shift-right delete)
+snapple: key(down cmd-shift-k up cmd-left)

@@ -5,6 +5,7 @@ DONE:
 - Glob: Double check basic keys / alphabet / std ... (remove arrow, use fail instead of fine etc)
 - Applications
     - finder
+    - vscode
 
 BEGUN:
 
@@ -17,5 +18,4 @@ LEFT:
     - notes
     - Outlook
     - slack
-    - vscode
 - Code / language - specific
