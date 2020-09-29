@@ -65,3 +65,23 @@ mark channel read: key(esc)
 emote <user.text>: "{text}"
 toggle left sidebar: key(cmd-shift-d)
 toggle right sidebar: key(cmd-.)
+
+# CH editions:
+# Emojis
+thumbs up: ':+1:'
+smiley: ':slightly_smiling_face:'
+laugh out loud: ':joy:'
+thinking face: ':thinking_face:'
+mind blown: 
+    ':mindblown1::mindblown2:'
+    key('shift-enter')
+    ':mindblown3::mindblown4:'
+amazed:
+    ':mindblown1::mindblown2:'
+    key('shift-enter')
+    ':mindblown3::mindblown4:'
+
+# Code
+coded word: key(cmd-shift-c)
+coded block: key(cmd-shift-alt-c)
+threads: key(cmd-.)
