@@ -18,7 +18,7 @@ select line <number> until <number>:
     key(cmd-g)
     '{number_1}'
     key(enter)
-    key(down: (number_2 - number_1))
+    key(down: number_2 - number_1)
 select: key(cmd-d)
 select instances: key(cmd-shift-l)
 refactor: key(f2)

@@ -24,7 +24,7 @@ midclick:
 #option = alt
 #shift
 #super = windows key
-<user.modifiers> (touch | pick): 
+<user.modifiers> touch: 
 	key("{modifiers}:down")
 	mouse_click(0)
 	key("{modifiers}:up")
@@ -53,7 +53,7 @@ wheel down here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down()
 wheel tiny [down]: mouse_scroll(20)
-wheel tiny [down]:
+wheel tiny [down] hereatl1a1:
     user.mouse_move_center_active_window()
     mouse_scroll(20)
 wheel downer: user.mouse_scroll_down_continuous()

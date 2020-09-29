@@ -37,12 +37,12 @@ skip right:
 skip left:
     user.mouse_move_center_active_window()
     mouse_scroll(0, 40)
-mouse up <number>: move_mouse_relative('up', {number})
-mouse right <number>: move_mouse_relative('right', {number})
-mouse down <number>: move_mouse_relative('down', {number})
-mouse left <number>: move_mouse_relative('left', {number})
-mouse (install | update): move_mouse_absolute(1860, 92)
-mouse outlook: move_mouse_absolute(1376, 881)
+mouse up <number>: user.move_mouse_relative('up', number)
+mouse right <number>: user.move_mouse_relative('right', number)
+mouse down <number>: user.move_mouse_relative('down', number)
+mouse left <number>: user.move_mouse_relative('left', number)
+mouse (install | update): user.move_mouse_absolute(1860, 92)
+mouse outlook: user.move_mouse_absolute(1376, 881)
 
 # finder shortcuts
 go computer: key(cmd-shift-c)

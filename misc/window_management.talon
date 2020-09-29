@@ -12,4 +12,4 @@ shift two screens: user.move_screen(-1)
 maximize: user.move_window(0,0,1,1)
 split window left: user.move_window(0,0,0.5,1)
 split windowe right: user.move_window(0.5,0,0.5,1)
-restore windows: key(ctrl-alt-cmd-shift-o),
+restore windows: key(ctrl-alt-cmd-shift-o)

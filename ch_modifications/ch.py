@@ -28,6 +28,7 @@ websites = {
     'back end board': 'https://git.sto.netlight.se/feedback-tool/feedback-api/boards',
 }
 
+
 @mod.action_class
 class Actions:
     def mouse_smooth_scroll(amount: int):
@@ -41,23 +42,22 @@ class Actions:
             time.sleep(interval)
 
     def move_mouse_relative(direction: str, distance: int):
+        """Moves mouse relative to current position"""
         pixels_to_travel = 50 * distance
         direction_vector = {
             'up': (0, -1),
             'right': (1, 0),
             'down': (0, 1),
             'left': (-1, 0)
-        }[direction_type]
+        }[direction]
         (x, y) = ctrl.mouse_pos()
         ctrl.mouse_move(x + direction_vector[0] * pixels_to_travel,
                         y + direction_vector[1] * pixels_to_travel)
 
-
     def move_mouse_absolute(xPos: int, yPos: int):
-        def move_mouse_to_position(m):
-            ctrl.mouse_move(xPos, yPos)
-        return move_mouse_to_position
-    
+        """Moves mouse to absolute positio"""
+        ctrl.mouse_move(xPos, yPos)
+
     def move_screen(direction: int):
         """Moves a window between screens"""
         win = ui.active_window()
@@ -89,13 +89,15 @@ class Actions:
         win.rect = rect
 
     def go_to_website(name: str):
+        """Goes to a specific website"""
         actions.browser.focus_address()
         w = websites.get(name)
         actions.key("cmd-a")
         actions.insert(name)
         actions.key("enter")
 
-    def command_with_delay(keyDescription, delay):
+    def command_with_delay(keyDescription: str, delay: float):
+        """Performs a series of commands with delay inbetween"""
         keysToBePressed = keyDescription.split()
         for key in keysToBePressed:
             actions.key(key)

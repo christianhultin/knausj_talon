@@ -46,7 +46,7 @@ generate: 'npm run generate\n'
 exit: 
     key(ctrl-c)
     'exit'
-cancel: key(ctrl-c)'
+cancel: key(ctrl-c)
 clear: 
     key(ctrl-c)
     'clear'
@@ -65,9 +65,9 @@ add: 'git add '
 add all: 'git add .'
 commit: 
     'git commit -m'
-    key(left)'
+    key(left)
 amend: 'git commit --amend'
-simple commit: 'git add .  && git commit -m update  && git push'
+simple commit: 'git add .  && git commit -m "update"  && git push'
 clone: 
     'git clone'
     key(cmd-v)
