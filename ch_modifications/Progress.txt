@@ -6,6 +6,7 @@ DONE:
 - Applications
     - finder
     - vscode
+    - slack
 
 BEGUN:
 
@@ -17,5 +18,4 @@ LEFT:
     - iterm
     - notes
     - Outlook
-    - slack
 - Code / language - specific
