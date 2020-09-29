@@ -7,6 +7,7 @@ DONE:
     - finder
     - vscode
     - slack
+    - iterm
 
 BEGUN:
 
@@ -15,7 +16,6 @@ LEFT:
     - firefox
     - Chrome
     - gmail
-    - iterm
     - notes
     - Outlook
 - Code / language - specific
