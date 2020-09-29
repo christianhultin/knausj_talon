@@ -55,9 +55,9 @@ go air drop: key(cmd-shift-r)
 go utilities: key(cmd-shift-u)
 go downloads: key(cmd-shift-l)
 go applications: key(cmd-shift-a)
-go developer: user.go_to_path_in_finder('~/Developer')
-go talon: user.go_to_path_in_finder('~/.talon/user')
-go pictures: user.go_to_path_in_finder('~/Pictures')
+go developer: user.file_manager_open_directory('~/Developer')
+go talon: user.file_manager_open_directory('~/.talon/user')
+go pictures: user.file_manager_open_directory('~/Pictures')
 
 # various
 (close | quit) application: key(cmd-q)

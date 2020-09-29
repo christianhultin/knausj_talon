@@ -3,9 +3,19 @@ DONE:
 - Ch
 - Mouse advanced (scroll)
 - Glob: Double check basic keys / alphabet / std ... (remove arrow, use fail instead of fine etc)
+- Applications
+    - finder
 
 BEGUN:
 
 LEFT:
 - Applications
+    - firefox
+    - Chrome
+    - gmail
+    - iterm
+    - notes
+    - Outlook
+    - slack
+    - vscode
 - Code / language - specific

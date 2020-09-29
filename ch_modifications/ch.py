@@ -33,12 +33,6 @@ class Actions:
         def move_mouse_to_position(m):
             ctrl.mouse_move(xPos, yPos)
         return move_mouse_to_position
-
-    def go_to_path_in_finder(path: str):
-        """Goes to a path in finder"""
-        actions.key('cmd-shift-g')
-        actions.insert(path)
-        actions.key('return')
     
     def move_screen(direction: int):
         """Moves a window between screens"""
