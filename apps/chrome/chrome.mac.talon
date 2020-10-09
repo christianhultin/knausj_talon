@@ -77,6 +77,10 @@ action(browser.toggle_dev_tools):
 inspect: key(cmd-shift-c)
 device: key(cmd-shift-m)
 console: key(cmd-alt-j)
+link:
+	key(esc)
+	key(esc)
+	key(f)
 
 # workona
 workspace[s]: key(alt-a)

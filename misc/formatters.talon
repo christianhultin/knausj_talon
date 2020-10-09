@@ -21,3 +21,11 @@ format copy <number>:
 ^nope that was <user.formatters>$:
   user.formatters_clear_last()
   insert(user.formatters_reformat_last(user.formatters))
+
+  # CH Editions
+more <user.text>$:
+  result = user.formatted_text(text, "NOOP")
+  insert(' ' + result)
+more <user.text> over:
+  result = user.formatted_text(text, "NOOP")
+  insert(' ' + result)

@@ -6,7 +6,7 @@ workspace <number>: key("cmd-{number}")
 previous workspace: key(cmd-shift-[)
 next workspace: key(cmd-shift-])
 # Channel
-channel: key(cmd-k)
+# channel: key(cmd-k)
 channel <user.text>:
     key(cmd-k)
     insert(user.formatted_text(user.text, "ALL_LOWERCASE"))
@@ -85,3 +85,9 @@ amazed:
 coded word: key(cmd-shift-c)
 coded block: key(cmd-shift-alt-c)
 threads: key(cmd-.)
+
+# Other overrides
+channel: 
+    key(cmd-k)
+    sleep(300ms)
+    key(down)

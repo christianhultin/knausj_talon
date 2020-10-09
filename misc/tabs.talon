@@ -11,6 +11,7 @@ go tab final: user.tab_final()
 # CH editiions
 nippy: app.tab_open()
 crack: app.tab_close()
+undo crack: key(cmd-shift-t)
 steppy: app.tab_next()
-jump <number>: user.tab_jump(number)
+jump <number>: user.jump_tab(number)
 steffy: app.tab_previous()

@@ -102,3 +102,8 @@ class Actions:
         for key in keysToBePressed:
             actions.key(key)
             time.sleep(delay)
+
+    def jump_tab(number: float):
+        """Jumps to a specific tab"""
+        command = "cmd-" + str(number)
+        actions.key(command)

@@ -1,5 +1,6 @@
 app: iterm2
 -
+tag(): user.tabs
 # shortcut projects:
 go home: 'cd ~/'
 go talon: 'cd ~/.talon/user'
@@ -21,8 +22,8 @@ split horizontal: key(cmd-shift-d)
 split vertical: key(cmd-d)
 (new tab | nippy): key(cmd-t)
 next pane: key(ctrl-tab)
-steffy: key(ctrl-shift-tab)
-steppy: key(ctrl-tab)
+action(app.tab_previous): key(ctrl-shift-tab)
+action(app.tab_next): key(ctrl-tab)
 make (durr | dear) <user.text>: 'mkdir {text}'
 
 # shell scripts
@@ -31,7 +32,8 @@ restart talon: 'restartOnlyTalon'
 
 # package managers
 start (application | this | frontend): 'npm run start\n'
-start galaxy: 'npm run dev -- -s -m'
+start galaxy: 'npm run start:dev'
+start galaxy big: 'npm run dev -- -s -m'
 (start | run) ios: 'npm run ios:dev'
 (start | run) android: 'npm run android:dev'
 start (mocked | mock): 'npm run start:mockedBackend'
@@ -64,7 +66,7 @@ slap: key(enter)
 add: 'git add '
 add all: 'git add .'
 commit: 
-    'git commit -m'
+    'git commit -m ""'
     key(left)
 amend: 'git commit --amend'
 simple commit: 'git add .  && git commit -m "update"  && git push'
@@ -103,7 +105,7 @@ doc images: 'docker images'
 doc volumes: 'docker volume ls'
 doc volume prune: 'docker volume prune'
 doc system prune: 'docker system prune -a'
-doc compose: 'docker-compose up -d'
+doc compose$: 'docker-compose up -d'
 doc compose down: 'docker-compose down'
 
 # Knex:

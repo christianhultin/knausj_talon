@@ -148,6 +148,7 @@ class Actions:
 
     def switcher_launch(path: str):
         """Launch a new application by path"""
+        print(path)
         ui.launch(path=path)
 
     def switcher_toggle_running():

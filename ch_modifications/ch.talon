@@ -6,8 +6,8 @@ shroom: key(shift-down)
 scram: edit.extend_word_left()
 scrisch: edit.extend_word_right()
 deselect: key(alt-right alt-shift-left)
-lecksy: extend_line_start()
-ricksy: extend_line_end()
+lecksy: edit.extend_line_start()
+ricksy: edit.extend_line_end()
 tarsh: key(shift-tab)
 (rick | rip): key(backspace)
 (backspace | rep | rap): key(alt-backspace)
@@ -68,10 +68,20 @@ back tick: '`'
 doc: 'docker'
 slap: key(enter)
 jimmy: 'git'
-elipsis: '...'
+tag: '<'
+close tag: '>'
 lock (computer | screen): 
     speech.disable()
     key(ctrl-cmd-q)
+(Active | toggle) joystick:
+    user.switcher_focus('Joystick Mapper')
+    user.mouse_move_center_active_window()
+    sleep(50ms)
+    user.move_mouse_relative('left', 4)
+    sleep(50ms)
+    user.move_mouse_relative('up', 0.5)
+    mouse_click(0)
+
 
 # personal
 paste e-mail: 'christian.h.hultin@gmail.com'
