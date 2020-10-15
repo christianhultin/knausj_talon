@@ -31,18 +31,19 @@ restart voice recognition: 'restartTalonDragon'
 restart talon: 'restartOnlyTalon'
 
 # package managers
-start (application | this | frontend): 'npm run start\n'
+start (application | this | frontend): 'npm run start'
+test (application | this | frontend): 'npm run test'
+node install: 'npm i'
+node (ron | run): 'npm run'
+generate: 'npm run generate'
+
 start galaxy: 'npm run start:dev'
 start galaxy big: 'npm run dev -- -s -m'
 (start | run) ios: 'npm run ios:dev'
 (start | run) android: 'npm run android:dev'
 start (mocked | mock): 'npm run start:mockedBackend'
-(start | run) backend: 'SPRING_PROFILES_ACTIVE=development ./gradlew bootRun\n'
-test (application | this | frontend): 'npm run test'
+(start | run) backend: 'SPRING_PROFILES_ACTIVE=development ./gradlew bootRun'
 test settings: 'npm run setup:dev'
-node install: 'npm i\n'
-node (ron | run): 'npm run'
-generate: 'npm run generate\n'
 
 # General commands
 exit: 
