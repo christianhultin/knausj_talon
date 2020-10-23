@@ -18,9 +18,16 @@ snap <user.running_applications> [screen] <number>:
     user.move_app_to_screen(running_applications, number)
 
 # CH Editions
-shift screen: user.move_screen(1)
-shift two screens: user.move_screen(-1)
-maximize: user.move_window(0,0,1,1)
+shift screen:
+    user.move_screen(1)
+    sleep(500ms)
+    user.move_window(0,0,1,1)
+shift two screens:
+    user.move_screen(-1)
+    sleep(500ms)
+    user.move_window(0,0,1,1)
+maximize:
+    user.move_window(0,0,1,1)
 split window left: user.move_window(0,0,0.5,1)
 split window right: user.move_window(0.5,0,0.5,1)
 split window bottom: user.move_window(0,0.5,1,0.5)

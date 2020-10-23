@@ -39,6 +39,8 @@ generate: 'npm run generate'
 
 start galaxy: 'npm run start:dev'
 start galaxy big: 'npm run dev -- -s -m'
+start enterprise: 'npm run dev'
+start bossy: 'npm start'
 (start | run) ios: 'npm run ios:dev'
 (start | run) android: 'npm run android:dev'
 start (mocked | mock): 'npm run start:mockedBackend'
@@ -72,7 +74,7 @@ commit:
 amend: 'git commit --amend'
 simple commit: 'git add .  && git commit -m "update"  && git push'
 clone: 
-    'git clone'
+    'git clone '
     key(cmd-v)
 push up: 'git push'
 status: 
@@ -106,6 +108,7 @@ doc images: 'docker images'
 doc volumes: 'docker volume ls'
 doc volume prune: 'docker volume prune'
 doc system prune: 'docker system prune -a'
+doc prune all: 'docker-compose down && docker volume prune  && docker system prune -a && docker-compose up -d && npm run setup:dev'
 doc compose$: 'docker-compose up -d'
 doc compose down: 'docker-compose down'
 
