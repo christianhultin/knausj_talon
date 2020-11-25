@@ -20,27 +20,22 @@ underline: key(cmd-u)
 
 # Mouse
 skip: 
-    user.mouse_move_center_active_window()
     user.mouse_smooth_scroll(600)
 skippy: 
-    user.mouse_move_center_active_window()
     user.mouse_smooth_scroll(300)
 hip: 
-    user.mouse_move_center_active_window()
     user.mouse_smooth_scroll(-600)
 hippy: 
-    user.mouse_move_center_active_window()
     user.mouse_smooth_scroll(-300)
 skip right: 
-    user.mouse_move_center_active_window()
     mouse_scroll(0, -40)
 skip left:
-    user.mouse_move_center_active_window()
     mouse_scroll(0, 40)
 mouse up <number>: user.move_mouse_relative('up', number)
 mouse right <number>: user.move_mouse_relative('right', number)
 mouse down <number>: user.move_mouse_relative('down', number)
 mouse left <number>: user.move_mouse_relative('left', number)
+mouse pop: user.move_mouse_absolute(1860, 49)
 mouse (install | update): user.move_mouse_absolute(1860, 92)
 mouse outlook: user.move_mouse_absolute(1376, 881)
 
@@ -63,10 +58,23 @@ go pictures: user.file_manager_open_directory('~/Pictures')
 (close | quit) application: key(cmd-q)
 tab window: key(alt-tab)
 windows: key(f6)
+window <user.text>:
+    key(f6)
+    insert(user.formatted_text(user.text, "ALL_LOWERCASE"))
+    key(enter)
+    sleep(1s)
+    user.mouse_move_center_active_window()
+specific window {user.windowNames}: 
+    key(f6)
+    insert(user.windowNames)
+    key(enter)
+    sleep(1s)
+    user.mouse_move_center_active_window()
 worm: 'python'
 back tick: '`'
 doc: 'docker'
 slap: key(enter)
+slapy: key(cmd-right enter)
 jimmy: 'git'
 tag: '<'
 close tag: '>'
@@ -81,7 +89,8 @@ lock (computer | screen):
     sleep(50ms)
     user.move_mouse_relative('up', 0.5)
     mouse_click(0)
-
+(end | and): key(cmd-right)
+home: key(cmd-left)
 
 # personal
 paste e-mail: 'christian.h.hultin@gmail.com'
@@ -94,3 +103,20 @@ paste work e-mail: 'christian.hultin@netlight.com'
 # (decrease | volume) (volume | decrease): key(volume_down, 2)
 # mute sound: key(mute, 2)
 # (play | pause) (sound | music): key(play, 2)
+
+# Milky: 
+style it:
+    'css={css``'
+    '}'
+    key(left:2)
+    key(enter:2)
+    key(up)
+    key(tab)
+spacing: 
+    '${spacing[]'
+    '}px;'
+    key(left:5)
+coloring: 
+    '${colors.'
+    '}'
+    key(left)

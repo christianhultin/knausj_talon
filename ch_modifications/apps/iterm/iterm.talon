@@ -69,7 +69,7 @@ slap: key(enter)
 add: 'git add '
 add all: 'git add .'
 commit: 
-    'git commit -m ""'
+    'gcmsg ""'
     key(left)
 amend: 'git commit --amend'
 simple commit: 'git add .  && git commit -m "update"  && git push'
@@ -78,28 +78,32 @@ clone:
     key(cmd-v)
 push up: 'git push'
 status: 
-    'git status'
+    'gst'
     key(enter)
 (difference | did | dave): 'git diff'
 pull down: 
     'git pull'
     key(enter)
 (pull origin) | (origin master): 'git pull origin master'
-add upstream: 'git remote add upstream'
+# add upstream: 'git remote add upstream'
 fetch upstream: 'git fetch upstream'
 fetch: 'git fetch'
 remote: 'git remote -v'
-check out: 'git checkout '
+check out: 'gco '
+new branch: 
+    'gco -b ""'
+    key(left)
 merge: 'git merge '
 stash: 'git stash'
 stash pop: 'git stash pop'
 log: 'git log'
 reset hard: 'git reset --hard'
 go (to) master: 
-    'git checkout master'
+    'gcm'
     key(enter)
 reload submodule: 'git submodule deinit -f . && git submodule update --init'
 remove untracked files: 'git clean -f'
+push upstream: 'gpsup'
 
 # Docker
 doc: 'docker'

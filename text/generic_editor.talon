@@ -36,10 +36,10 @@ go way right:
     edit.line_end()
 
 go way down:
-    edit.file_end()
+    key(cmd-down)
 
 go way up:
-    edit.file_start()
+    key(cmd-up)
 
 go page down:
     edit.page_down()

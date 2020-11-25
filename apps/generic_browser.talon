@@ -65,7 +65,7 @@ dev tools: browser.toggle_dev_tools()
 
 
 # CH Editions: 
-website <user.text>: user.go_to_website(text)
+website {user.website}: user.go_to_website(user.website)
 # Gmail:
 mark: key(x)
 mark all: key(q)
@@ -76,3 +76,7 @@ select: key(x)
 unread: command_with_delay("shift-u", 0.2)
 read: command_with_delay("shift-i", 0.2)
 quick read: command_with_delay("x t w e ", 0.2)
+link:
+    key(esc)
+    key(esc)
+    key(f)

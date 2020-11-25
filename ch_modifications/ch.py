@@ -1,9 +1,11 @@
 import time
-from talon import Module, ctrl, actions, ui
+from talon import Module, ctrl, actions, ui, Context
 
 mod = Module()
+ctx = Context()
 
-websites = {
+mod.list('website', desc='Opening website')
+ctx.lists['self.website'] = {
     'facebook': 'https://facebook.com',
     'twitter': 'https://twitter.com',
     'trello': 'https://trello.com',
@@ -16,7 +18,7 @@ websites = {
     'messenger': 'https://www.messenger.com/',
     'youtube': 'https://www.youtube.com/',
     'community': 'https://github.com/dwiel/talon_community',
-    'localhost': 'https://localhost:3000',
+    'localhost': 'http://localhost:3000',
     'rebel': 'https://rebel.netlight.com/',
     'stack overflow': 'https://stackoverflow.com/',
     # git lab
@@ -28,6 +30,10 @@ websites = {
     'back end board': 'https://git.sto.netlight.se/feedback-tool/feedback-api/boards',
 }
 
+mod.list('windowNames', desc='Opening windows')
+ctx.lists['self.windowNames'] = {
+    'talon': 'talon',
+}
 
 @mod.action_class
 class Actions:
@@ -88,12 +94,10 @@ class Actions:
         rect.height *= h
         win.rect = rect
 
-    def go_to_website(name: str):
+    def go_to_website(website: str):
         """Goes to a specific website"""
         actions.browser.focus_address()
-        w = websites.get(name)
-        actions.key("cmd-a")
-        actions.insert(name)
+        actions.insert(website)
         actions.key("enter")
 
     def command_with_delay(keyDescription: str, delay: float):

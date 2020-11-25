@@ -1,4 +1,5 @@
 mode: user.javascript
+mode: user.typescript
 mode: command
 and code.language: javascript
 -
@@ -24,7 +25,7 @@ and code.language: javascript
 (tag | ellie) open footer: '<footer>'
 (tag | ellie) close footer: '</footer>'
 
-(tag | ellie) div: '<div className={classes.'
+(tag | ellie) div: '<div>'
 (tag | ellie) open div: '<div>'
 (tag | ellie) close div: '</div>'
 

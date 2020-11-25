@@ -89,5 +89,6 @@ threads: key(cmd-.)
 # Other overrides
 channel: 
     key(cmd-k)
-    sleep(300ms)
-    key(down)
+
+# CH editions:
+read all: key(shift-esc)
