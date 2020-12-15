@@ -74,7 +74,7 @@ top message: key(up: 50)
 inbox: command_with_delay("esc esc g i", 0.2)
 select: key(x)
 unread: command_with_delay("shift-u", 0.2)
-read: command_with_delay("shift-i", 0.2)
+# read: command_with_delay("shift-i", 0.2)
 quick read: command_with_delay("x t w e ", 0.2)
 link:
     key(esc)

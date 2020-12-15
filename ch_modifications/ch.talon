@@ -89,8 +89,9 @@ lock (computer | screen):
     sleep(50ms)
     user.move_mouse_relative('up', 0.5)
     mouse_click(0)
-(end | and): key(cmd-right)
-home: key(cmd-left)
+go (end | and): key(cmd-right)
+go home: key(cmd-left)
+point: '.'
 
 # personal
 paste e-mail: 'christian.h.hultin@gmail.com'

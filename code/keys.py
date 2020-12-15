@@ -117,7 +117,7 @@ ctx.lists["self.symbol_key"] = {
     "dash": "-",
     "equals": "=",
     "plus": "+",
-    "question mark": "?",
+    "questionmark": "?",
     "question": "?",
     "tilde": "~",
     "bang": "!",
