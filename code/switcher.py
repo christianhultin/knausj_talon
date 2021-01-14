@@ -3,7 +3,7 @@ import re
 import time
 
 import talon
-from talon import Context, Module, imgui, ui, fs, actions
+from talon import Context, Module, imgui, ui, fs, actions, app
 
 # Construct at startup a list of overides for application names (similar to how homophone list is managed)
 # ie for a given talon recognition word set  `one note`, recognized this in these switcher functions as `ONENOTE`
@@ -95,10 +95,6 @@ def update_overrides(name, flags):
         update_lists()
 
 
-update_overrides(None, None)
-fs.watch(overrides_directory, update_overrides)
-
-
 @mod.action_class
 class Actions:
     def get_running_app(name: str) -> ui.App:
@@ -154,7 +150,7 @@ class Actions:
         gui.hide()
 
 
-@imgui.open(software=False)
+@imgui.open(software=app.platform == "linux")
 def gui(gui: imgui.GUI):
     gui.text("Names of running applications")
     gui.line()
@@ -197,6 +193,14 @@ def ui_event(event, arg):
 # to initialize user launch to avoid getting "List not found: user.launch"
 # errors on other platforms.
 ctx.lists["user.launch"] = {}
-update_launch_list()
-ui.register("", ui_event)
 
+
+# Talon starts faster if you don't use the `talon.ui` module during launch
+def on_ready():
+    update_overrides(None, None)
+    fs.watch(overrides_directory, update_overrides)
+    update_launch_list()
+    ui.register("", ui_event)
+# NOTE: please update this from "launch" to "ready" in Talon v0.1.5
+app.register("launch", on_ready)
+# app.register("ready", on_ready)
