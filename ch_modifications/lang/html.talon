@@ -1,7 +1,8 @@
 mode: user.javascript
 mode: user.typescript
 mode: command
-and code.language: javascript
+code.language: javascript
+code.language: typescript
 -
 # Use this for any missing elements unti they're added
 (tag | ellie) html: '<html>'

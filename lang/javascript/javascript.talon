@@ -1,6 +1,7 @@
 mode: user.javascript
 mode: command
-and code.language: javascript
+code.language: javascript
+code.language: typescript
 -
 tag(): user.code_operators
 tag(): user.code_comment

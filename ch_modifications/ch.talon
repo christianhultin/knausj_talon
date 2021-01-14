@@ -96,6 +96,7 @@ point: '.'
 # personal
 paste e-mail: 'christian.h.hultin@gmail.com'
 paste work e-mail: 'christian.hultin@netlight.com'
+(voice | Swedish) disclaimer: '(writing in English since I\'m using voice recognition, you can write in Swedish if you want :slightly_smiling_face:)'
 
 # # Special keys - doesnt seem to work yet
 # increase brightness: key(brightness_up, 2)
