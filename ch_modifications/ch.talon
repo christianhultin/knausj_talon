@@ -57,15 +57,15 @@ go pictures: user.file_manager_open_directory('~/Pictures')
 # various
 (close | quit) application: key(cmd-q)
 tab window: key(alt-tab)
-windows: key(f6)
+windows: key(cmd-shift-ctrl-alt-t)
 window <user.text>:
-    key(f6)
+    key(shift-cmd-ctrl-alt-t)
     insert(user.formatted_text(user.text, "ALL_LOWERCASE"))
     key(enter)
     sleep(1s)
     user.mouse_move_center_active_window()
 specific window {user.windowNames}: 
-    key(f6)
+    key(shift-cmd-ctrl-alt-t)
     insert(user.windowNames)
     key(enter)
     sleep(1s)

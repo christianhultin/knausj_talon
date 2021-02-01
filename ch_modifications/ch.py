@@ -35,6 +35,7 @@ ctx.lists['self.windowNames'] = {
     'talon': 'talon',
 }
 
+
 @mod.action_class
 class Actions:
     def mouse_smooth_scroll(amount: int):
@@ -111,3 +112,10 @@ class Actions:
         """Jumps to a specific tab"""
         command = "cmd-" + str(number)
         actions.key(command)
+
+    def file_manager_open_directory(path: str):
+        """opens the directory that's already visible in the view"""
+        actions.key("cmd-shift-g")
+        actions.sleep("50ms")
+        actions.insert(path)
+        actions.key("enter")

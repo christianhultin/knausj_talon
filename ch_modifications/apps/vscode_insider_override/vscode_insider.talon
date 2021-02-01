@@ -1,4 +1,4 @@
-app: vscodeInsider
+app: vscode
 -
 tag(): user.find_and_replace
 tag(): user.line_commands
@@ -6,6 +6,9 @@ tag(): user.multiple_cursors
 tag(): user.snippets
 tag(): user.splits
 tag(): user.tabs
+
+action(app.tab_open): key(cmd-n)
+action(app.tab_close): key(cmd-w)
 
 # Navigating text
 line <number>:
@@ -74,11 +77,14 @@ block comment: key(alt-shift-a)
 (arrange | fix) imports: key(alt-shift-o)
 master: key(cmd-p)
 search all: key(cmd-shift-f)
-(version | source) control: 
+source controll:
     key(ctrl-shift-g)
-    sleep(200ms)
+    key(tab)
+    key(down)
+focus source controll:
+    key(ctrl-shift-g)
     key(shift-tab)
-    sleep(200ms)
+    key(down)
     key(down)
     key(down)
 (drop-down | drop): key(ctrl-space)

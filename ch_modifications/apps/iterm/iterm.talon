@@ -96,7 +96,7 @@ new branch:
 merge: 'git merge '
 stash: 'git stash'
 stash pop: 'git stash pop'
-log: 'git log'
+log: 'glog'
 reset hard: 'git reset --hard'
 go (to) master: 
     'gcm'
