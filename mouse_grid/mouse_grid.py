@@ -2,11 +2,11 @@
 # see https://github.com/timo/talon_scripts
 from talon import Module, Context, app, canvas, screen, settings, ui, ctrl, cron
 from talon.skia import Shader, Color, Paint, Rect
-from talon.types.point import Point2d
 from talon_plugins import eye_mouse, eye_zoom_mouse
 from typing import Union
 
-import math, time
+import math
+import time
 
 import typing
 
@@ -43,7 +43,8 @@ narrow_expansion = mod.setting(
     desc="""After narrowing, grow the new region by this many pixels in every direction, to make things immediately on edges easier to hit, and when the grid is at its smallest, it allows you to still nudge it around""",
 )
 
-mod.tag("mouse_grid_showing", desc="Tag indicates whether the mouse grid is showing")
+mod.tag("mouse_grid_showing",
+        desc="Tag indicates whether the mouse grid is showing")
 mod.tag("mouse_grid_enabled", desc="Tag enables the mouse grid commands.")
 ctx = Context()
 
@@ -57,7 +58,8 @@ class MouseSnapNine:
         self.offset_y = self.screen.y
         self.width = self.screen.width
         self.height = self.screen.height
-        self.states.append((self.offset_x, self.offset_y, self.width, self.height))
+        self.states.append(
+            (self.offset_x, self.offset_y, self.width, self.height))
         self.mcanvas = canvas.Canvas.from_screen(self.screen)
         self.img = None
         self.wants_capture = 0
@@ -262,8 +264,8 @@ class MouseSnapNine:
                     text_rect = canvas.paint.measure_text(text_string)[1]
                     background_rect = text_rect.copy()
                     background_rect.center = Point2d(
-                            offset_x + width / 6 + col * width / 3,
-                            offset_y + height / 6 + row * height / 3)
+                        offset_x + width / 6 + col * width / 3,
+                        offset_y + height / 6 + row * height / 3)
                     background_rect = background_rect.inset(-4)
                     paint.color = "9999995f"
                     paint.style = Paint.Style.FILL
@@ -406,7 +408,8 @@ class MouseSnapNine:
         self.narrow(1 + col + 3 * row, move=False)
 
     def save_state(self):
-        self.states.append((self.offset_x, self.offset_y, self.width, self.height))
+        self.states.append(
+            (self.offset_x, self.offset_y, self.width, self.height))
 
     def go_back(self):
         last_state = self.states.pop()

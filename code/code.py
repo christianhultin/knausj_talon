@@ -6,19 +6,24 @@ mod.list("code_functions", desc="List of functions for active language")
 mod.list("code_types", desc="List of types for active language")
 mod.list("code_libraries", desc="List of libraries for active language")
 
-setting_private_function_formatter = mod.setting("code_private_function_formatter", str)
+setting_private_function_formatter = mod.setting(
+    "code_private_function_formatter", str)
 setting_protected_function_formatter = mod.setting(
     "code_protected_function_formatter", str
 )
-setting_public_function_formatter = mod.setting("code_public_function_formatter", str)
-setting_private_variable_formatter = mod.setting("code_private_variable_formatter", str)
+setting_public_function_formatter = mod.setting(
+    "code_public_function_formatter", str)
+setting_private_variable_formatter = mod.setting(
+    "code_private_variable_formatter", str)
 setting_protected_variable_formatter = mod.setting(
     "code_protected_variable_formatter", str
 )
-setting_public_variable_formatter = mod.setting("code_public_variable_formatter", str)
+setting_public_variable_formatter = mod.setting(
+    "code_public_variable_formatter", str)
 
 mod.tag("code_comment", desc="Tag for enabling generic comment commands")
-mod.tag("code_block_comment", desc="Tag for enabling generic block comment commands")
+mod.tag("code_block_comment",
+        desc="Tag for enabling generic block comment commands")
 mod.tag("code_operators", desc="Tag for enabling generic operator commands")
 mod.tag(
     "code_generic",
@@ -53,6 +58,7 @@ extension_lang_map = {
     "snippets": "snippets",
     "talon": "talon",
     "ts": "typescript",
+    "tsx": "typescript",
     "vba": "vba",
     "vim": "vimscript",
     "vimrc": "vimscript",

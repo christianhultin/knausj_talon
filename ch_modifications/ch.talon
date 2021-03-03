@@ -43,7 +43,7 @@ mouse outlook: user.move_mouse_absolute(1376, 881)
 go computer: key(cmd-shift-c)
 go desktop: key(cmd-shift-d)
 go all files: key(cmd-shift-f)
-go home: key(cmd-shift-h)
+go home catalogue: key(cmd-shift-h)
 go icloud: key(cmd-shift-i)
 go documents: key(cmd-shift-o)
 go air drop: key(cmd-shift-r)
@@ -92,19 +92,12 @@ lock (computer | screen):
 go (end | and): key(cmd-right)
 go home: key(cmd-left)
 point: '.'
+crack: key(cmd-w)
 
 # personal
 paste e-mail: 'christian.h.hultin@gmail.com'
 paste work e-mail: 'christian.hultin@netlight.com'
 (voice | Swedish) disclaimer: '(writing in English since I\'m using voice recognition, you can write in Swedish if you want :slightly_smiling_face:)'
-
-# # Special keys - doesnt seem to work yet
-# increase brightness: key(brightness_up, 2)
-# decrease brightness: key(brightness_down, 2)
-# (increase | volume) (volume | increase): key(volume_up, 2)
-# (decrease | volume) (volume | decrease): key(volume_down, 2)
-# mute sound: key(mute, 2)
-# (play | pause) (sound | music): key(play, 2)
 
 # Milky: 
 style it:

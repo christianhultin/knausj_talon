@@ -158,3 +158,8 @@ state spread: "..."
 ^funky <user.text>$: user.code_private_function(text)
 ^pro funky <user.text>$: user.code_protected_function(text)
 ^pub funky <user.text>$: user.code_public_function(text)
+
+# CH Editions
+log:
+  'console.log()'
+  key(left)
